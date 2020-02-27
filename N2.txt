@@ -1,0 +1,32 @@
+label:type label:type label:type 
+data       data       data
+data       data       data
+data       data       data
+
+
+
+label -> name
+:: type
+col -> group
+
+row -> ring -> field
+
+grid -> vector space (affine?)
+
+Ex:
+
+date::timestamp  event::stringlabel assoc::stringname
+12031991         bday               zak
+06041776         cday               us
+08141947         iday               pk
+
+Inferring timestamp:-
+
+8-digit number. 
+Leading zeroes if necessary.
+
+combination operator possible... can form arbitrary group S3 OR maintain that there is a combination operator without closure.
+Defines computational boundedness
+
+cols only related by type
+rows linking data together. For n rows, form Kn for complete association. If categorization of labels reduction to m datapoints, then Km for coagulation where m < n.                                                        

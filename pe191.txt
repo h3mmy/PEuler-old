@@ -1,0 +1,32 @@
+	
+	#ways without L + #ways with 1 L -  #ways without 3 As in a row (without L) - (with L)
+	2^4             +    (2^3)*4     -   2                                      - 2
+	2^30            +    (2^29)*30   -   (2^27)*28.....needs all A posibilities
+	
+	maybe count up:
+2^4	#ways without an L => 2^30
+2*(2*2*1*2)	#ways without 3 A in a row => (2*2*1)^10+(2*1*2)^10+(1*2*2)^10 or 3*2^20  {More specifically with 1 O 2 O/A blocks }
+4*(2^3)	#ways with 1 L => (2^29)*30
+(1*2*1*2)*4	#ways without 3A in a row but 1 L someplace => 30*((2*2*1)^9+(2*2*1)) + 30*((2*1*2)^9 + (1*2*2)^9 +2*(1*2))
+
+
+Using basic counting theory:
+
+n is the number of days
+
+a = strings ending in 2 A
+b = strings having  0 L
+c = strings ending in 1 A
+Applend L if containing an L.
+t is our number of prize strings
+
+O,A,L are our actions to
+
+n-> n+1
+t-> 2*t +b -a
+a-> c
+b-> 2*b -a +La
+c-> t-(a+c)
+La-> Lb
+Lb-> Lc
+Lc-> t
